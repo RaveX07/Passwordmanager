@@ -5,3 +5,4 @@ class Password(models.Model):
     websiteURL = models.CharField(max_length=100)
     password = models.CharField(max_length=50)
     websiteName = models.CharField(max_length=32)
+    user = models.CharField(max_length=50)
