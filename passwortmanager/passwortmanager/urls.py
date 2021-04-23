@@ -15,10 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf.urls import url
 
 from main import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home_view, name="home"),
+    path('', views.home_view, name='home'),
+    #path('deletePassword/', views.delete_password, name="deletePassword"),
+    url(r'^delete/(?P<pk>[0-9]+)/$', views.delete_password, name='deletePassword'),
+    path('createPassword/', views.create_new_password_view, name='createNewPassword'),
 ]

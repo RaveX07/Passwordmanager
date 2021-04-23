@@ -57,7 +57,7 @@ ROOT_URLCONF = 'passwortmanager.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ["/home/jannis/Codes/DjangoWebsite/passwortmanager/templates"],
+        'DIRS': ["/home/jannis/Codes/passwordmanager/passwortmanager/templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
