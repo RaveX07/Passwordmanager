@@ -1,0 +1,10 @@
+<htrml>
+    <head><h1>Registrieren</h1></head>
+    <body>
+    <form method="POST"> {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Sichern">
+    </form>
+    <h4>Haben sie bereits einen Account, <a href="/login/">hier</a> können sie sich einloggen</h4>
+    </body>
+</htrml>

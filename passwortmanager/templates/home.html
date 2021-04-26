@@ -1,13 +1,13 @@
 <html>
     <head>
-        <h1>Hi {{ request.user }}, here are your passwords</h1>
-        <h3><a href="createPassword/"><input type="submit" value="Create New Password"></a></h3>
+        <h1>Hi {{ request.user }}, hier sind deine Passwörter</h1><a href="logout/"><input type="submit" value="Log Out"></a>
+        <h3><a href="createPassword/"><input type="submit" value="Erstelle ein neues Passwort"></a></h3>
     </head>
     <body>
         <ul>
             {% for x in Passwordlist %}
             {% if x.user == User %}
-            <li><h3>{{ x.websiteName }} - {{ x.password }} <form action="{% url 'deletePassword' x.id %}">{% csrf_token %}<input type='submit' value="Delete Password"></form></h3></li>
+            <li><h3>{{ x.websiteName }} - {{ x.password }} <form action="{% url 'deletePassword' x.id %}">{% csrf_token %}<input type='submit' value="Passwort Löschen"></form></h3></li>
             {% endif %}
             {% endfor %}
         </ul>
